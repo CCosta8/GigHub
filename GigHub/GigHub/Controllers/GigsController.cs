@@ -27,6 +27,7 @@ namespace GigHub.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(GigFormViewModel viewModel)
         {
             //if something went wrong, return the same view with the typed data and the error messages
